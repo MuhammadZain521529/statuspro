@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_140sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/saved_iv"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_share"
+        android:padding="@dimen/_2sdp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@id/saved_iv"
+        app:layout_constraintBottom_toBottomOf="@id/saved_iv"
+        android:background="#6C7A86"
+        app:layout_constraintStart_toEndOf="@id/delete_saved_iv"
+        android:id="@+id/share_saved_iv"/>
+
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_delete"
+        android:padding="@dimen/_2sdp"
+        android:scaleType="fitCenter"
+        android:background="#6C7A86"
+        app:layout_constraintEnd_toStartOf="@id/share_saved_iv"
+        app:layout_constraintStart_toStartOf="@id/saved_iv"
+        app:layout_constraintBottom_toBottomOf="@id/saved_iv"
+        android:id="@+id/delete_saved_iv"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

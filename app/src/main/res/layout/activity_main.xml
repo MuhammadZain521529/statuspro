@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar_main"
+        app:menu="@menu/main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#008000">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:fontFamily="serif"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_20ssp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ImageView
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_170sdp"
+        android:src="@drawable/ic_main"
+        android:id="@+id/main_iv"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_tv"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_main"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintTop_toBottomOf="@id/main_iv"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textSize="@dimen/_30ssp"
+        android:textColor="@android:color/black"
+        android:fontFamily="serif"
+        android:id="@+id/main_tv"
+        app:layout_constraintBottom_toTopOf="@id/whatsapp_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:layout_width="@dimen/_85sdp"
+        android:layout_height="@dimen/_85sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_2sdp"
+        android:src="@drawable/ic_whatsapp"
+        app:layout_constraintBottom_toTopOf="@id/saved_gallery_btn"
+        android:id="@+id/whatsapp_btn"
+        app:layout_constraintEnd_toStartOf="@id/whatsapp_business_btn"
+        app:layout_constraintTop_toBottomOf="@id/main_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:layout_width="@dimen/_115sdp"
+        android:layout_height="@dimen/_115sdp"
+        android:src="@drawable/ic_frame"
+        app:layout_constraintStart_toStartOf="@id/whatsapp_btn"
+        app:layout_constraintEnd_toEndOf="@id/whatsapp_btn"
+        app:layout_constraintTop_toTopOf="@id/whatsapp_btn"
+        app:layout_constraintBottom_toBottomOf="@id/whatsapp_btn"/>
+
+    <ImageView
+        android:layout_width="@dimen/_85sdp"
+        android:layout_height="@dimen/_85sdp"
+        android:layout_margin="@dimen/_5sdp"
+        app:layout_constraintStart_toEndOf="@id/whatsapp_btn"
+        android:src="@drawable/ic_whatsapp_business"
+        android:id="@+id/whatsapp_business_btn"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="@id/whatsapp_btn"
+        app:layout_constraintTop_toTopOf="@id/whatsapp_btn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:layout_width="@dimen/_115sdp"
+        android:layout_height="@dimen/_115sdp"
+        android:src="@drawable/ic_frame"
+        app:layout_constraintStart_toStartOf="@id/whatsapp_business_btn"
+        app:layout_constraintEnd_toEndOf="@id/whatsapp_business_btn"
+        app:layout_constraintTop_toTopOf="@id/whatsapp_business_btn"
+        app:layout_constraintBottom_toBottomOf="@id/whatsapp_business_btn"/>
+
+
+    <ImageView
+        android:layout_width="@dimen/_85sdp"
+        android:layout_height="@dimen/_85sdp"
+        android:src="@drawable/ic_gallery"
+        android:padding="@dimen/_7sdp"
+        android:id="@+id/saved_gallery_btn"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/whatsapp_btn"/>
+<!--        />-->
+
+    <ImageView
+        android:layout_width="@dimen/_115sdp"
+        android:layout_height="@dimen/_115sdp"
+        android:src="@drawable/ic_frame"
+        app:layout_constraintStart_toStartOf="@id/saved_gallery_btn"
+        app:layout_constraintEnd_toEndOf="@id/saved_gallery_btn"
+        app:layout_constraintTop_toTopOf="@id/saved_gallery_btn"
+        app:layout_constraintBottom_toBottomOf="@id/saved_gallery_btn"/>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/saved_gallery_btn"
+        ads:adUnitId="@string/admob_banner_ad">
+    </com.google.android.gms.ads.AdView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Status Pro</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="images">Images</string>
+    <string name="video">Videos</string>
+    <string name="video_title">Video Name</string>
+    <string name="saved">Saved Gallery</string>
+    <string name="whatsapplive">WhatsApp </string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="repost">Repost</string>
+    <string name="save">Save</string>
+    <string name="set_as">Set As</string>
+    <string name="drawer_menu">Drawer Menu</string>
+    <string name="home">Home</string>
+    <string name="status_gallery">Status Gallery</string>
+    <string name="about">About Us</string>
+    <string name="settings">Settings</string>
+    <string name="rate">Rate Us</string>
+    <string name="enable_night_mode">Enable Night Mode</string>
+    <string name="screen_orientation">Screen Orientation</string>
+    <string name="orientation">Orientation</string>
+    <string name="zaindeveloper">Zain Developer</string>
+    <string name="card_title">Card Title</string>
+    <string name="description">quick brown fox jumps over the lazy dog  might be like war were old for open black walk  miss once why all together use at form always did was  call start eat to that the tell them many way best no  follow away me eat war do miss another at those his about  away these go not red read an water been they oil down I  few set see a same put show have took good thought you  number had we down than light put another side set this  song next work for be world what run</string>
+    <string name="enabledarkmode">Enable Dark Mode</string>
+    <string name="nightmode">Night Mode</string>
+    <string name="auto">Auto</string>
+    <string name="portrait">Portrait</string>
+    <string name="landscape">Landscape</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="noimage">No image!</string>
+    <string name="check">Check</string>
+    <string name="live_status">Live Status</string>
+    <string name="business">Business Status</string>
+    <string name="whatsapp_gallery">WhatsApp Gallery</string>
+    <string name="whatsapp_business_gallery">"W-App Business "</string>
+    <string name="saved_gallery">Saved Gallery</string>
+    <string name="privacy_policy">Privacy Policy</string>
+<!--    <string name="admob_banner_ad">ca-app-pub-3940256099942544/6300978111</string>-->
+
+
+   ///////this is my orignal admob is
+    <string name="admob_banner_ad">ca-app-pub-4675301390533499/8578450137</string>
+
+
+    <string-array name="wp_name_list">
+
+        <item>Live Status</item>
+        <item>Status Gallery</item>
+        <item>Business Status</item>
+        <item>Settings</item>
+
+
+    </string-array>
+</resources>

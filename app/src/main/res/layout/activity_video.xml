@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.VideoActivity">
+
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/video_view_current"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:theme="@android:style/Animation"
+        app:controller_layout_id="@layout/cutom_controller_layout"
+        app:fastforward_increment="10000"
+        app:hide_on_touch="true"
+        app:player_layout_id="@layout/exo_simple_player_view"
+        app:rewind_increment="10000"
+        app:show_timeout="5000"
+        app:use_controller="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintStart_toStartOf="@id/video_view_current"
+        app:layout_constraintEnd_toEndOf="@id/video_view_current"
+        app:layout_constraintTop_toTopOf="@id/video_view_current"
+        app:layout_constraintBottom_toBottomOf="@id/video_view_current"/>
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:id="@+id/ic_add_fab"
+        android:src="@drawable/ic_add"
+        android:layout_marginBottom="@dimen/_80sdp"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/ic_add_fab"
+        app:layout_constraintStart_toStartOf="@id/ic_add_fab"
+        app:layout_constraintEnd_toEndOf="@id/ic_add_fab"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:visibility="gone"
+        android:id="@+id/ic_delete_video"
+        android:src="@drawable/ic_delete_fb"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:textAlignment="center"
+        android:background="#696969"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/_11ssp"
+        android:id="@+id/delte_tv"
+        android:visibility="gone"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toStartOf="@id/ic_delete_video"
+        app:layout_constraintBottom_toBottomOf="@id/ic_delete_video"
+        app:layout_constraintTop_toTopOf="@id/ic_delete_video"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/ic_delete_video"
+        app:layout_constraintStart_toStartOf="@id/ic_delete_video"
+        app:layout_constraintEnd_toEndOf="@id/ic_delete_video"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:visibility="gone"
+        android:id="@+id/ic_share_video"
+        android:src="@drawable/ic_share_fb"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/share"
+        android:textAlignment="center"
+        android:background="#696969"
+        android:id="@+id/share_tv"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/ic_share_video"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ic_share_video"
+        app:layout_constraintTop_toTopOf="@id/ic_share_video"
+        android:textSize="@dimen/_11ssp"
+        android:padding="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/ic_repost_video"
+        app:layout_constraintStart_toStartOf="@id/ic_repost_video"
+        app:layout_constraintEnd_toEndOf="@id/ic_repost_video"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:id="@+id/ic_download_video"
+        android:src="@drawable/ic_download_fb"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/repost"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:background="#696969"
+        android:textColor="@android:color/white"
+        android:id="@+id/repost_tv"
+        android:textStyle="bold"
+
+        android:textSize="@dimen/_11ssp"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toStartOf="@id/ic_repost_video"
+        app:layout_constraintBottom_toBottomOf="@id/ic_repost_video"
+        app:layout_constraintTop_toTopOf="@id/ic_repost_video"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/ic_share_video"
+        app:layout_constraintStart_toStartOf="@id/ic_share_video"
+        app:layout_constraintEnd_toEndOf="@id/ic_share_video"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:id="@+id/ic_repost_video"
+
+        android:src="@drawable/ic_repost"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/save"
+        android:background="#696969"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        android:id="@+id/save_tv"
+        android:textStyle="bold"
+        android:textSize="@dimen/_11ssp"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toStartOf="@id/ic_download_video"
+        app:layout_constraintBottom_toBottomOf="@id/ic_download_video"
+        app:layout_constraintTop_toTopOf="@id/ic_download_video"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

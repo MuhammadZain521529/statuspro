@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".Activities.PreviewActivity">
+
+
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:id="@+id/preview_image"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ic_add_btn_fb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_add"
+        android:layout_margin="@dimen/_15sdp"/>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/ic_delete_btn_fb"
+        android:textAlignment="center"
+        android:visibility="gone"
+    app:layout_constraintBottom_toTopOf="@id/ic_add_btn_fb"
+    app:layout_constraintStart_toStartOf="@id/ic_add_btn_fb"
+    app:layout_constraintEnd_toEndOf="@id/ic_add_btn_fb"
+    android:src="@drawable/ic_delete_fb"
+    android:layout_margin="@dimen/_15sdp"/>
+
+
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/delete"
+        android:textAlignment="center"
+        android:background="#696969"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:id="@+id/delte_tv_image"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toStartOf="@id/ic_delete_btn_fb"
+        app:layout_constraintBottom_toBottomOf="@id/ic_delete_btn_fb"
+        app:layout_constraintTop_toTopOf="@id/ic_delete_btn_fb"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ic_download_btn_fb"
+
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/ic_set_as_btn_fb"
+        app:layout_constraintEnd_toEndOf="@id/ic_set_as_btn_fb"
+        app:layout_constraintStart_toStartOf="@id/ic_set_as_btn_fb"
+        android:src="@drawable/ic_download_fb"
+        android:layout_margin="@dimen/_15sdp"/>
+
+
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:background="#696969"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/_11ssp"
+        android:id="@+id/save_tv_image"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toStartOf="@id/ic_download_btn_fb"
+        app:layout_constraintBottom_toBottomOf="@id/ic_download_btn_fb"
+        app:layout_constraintTop_toTopOf="@id/ic_download_btn_fb"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/ic_share_btn_fb"
+        app:layout_constraintBottom_toTopOf="@id/ic_delete_btn_fb"
+        app:layout_constraintStart_toStartOf="@id/ic_delete_btn_fb"
+        app:layout_constraintEnd_toEndOf="@id/ic_delete_btn_fb"
+        android:src="@drawable/ic_share_fb"
+        android:layout_margin="@dimen/_15sdp"/>
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/share"
+        android:textAlignment="center"
+        android:background="#696969"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textSize="@dimen/_11ssp"
+        android:id="@+id/share_tv_image"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toStartOf="@id/ic_share_btn_fb"
+        app:layout_constraintBottom_toBottomOf="@id/ic_share_btn_fb"
+        app:layout_constraintTop_toTopOf="@id/ic_share_btn_fb"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/ic_repost_btn_fb"
+        android:src="@drawable/ic_repost"
+        app:layout_constraintBottom_toTopOf="@id/ic_share_btn_fb"
+        app:layout_constraintStart_toStartOf="@id/ic_share_btn_fb"
+        app:layout_constraintEnd_toEndOf="@id/ic_share_btn_fb"
+        android:layout_margin="@dimen/_15sdp"/>
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:text="@string/repost"
+        android:background="#696969"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/_11ssp"
+        android:id="@+id/repost_tv_image"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toStartOf="@id/ic_repost_btn_fb"
+        app:layout_constraintBottom_toBottomOf="@id/ic_repost_btn_fb"
+        app:layout_constraintTop_toTopOf="@id/ic_repost_btn_fb"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ic_set_as_btn_fb"
+        android:visibility="gone"
+        android:src="@drawable/ic_set_as"
+        app:layout_constraintBottom_toTopOf="@id/ic_repost_btn_fb"
+        app:layout_constraintStart_toStartOf="@id/ic_repost_btn_fb"
+        app:layout_constraintEnd_toEndOf="@id/ic_repost_btn_fb"
+        android:layout_margin="@dimen/_15sdp"/>
+    <TextView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/set_as"
+        android:background="#696969"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textSize="@dimen/_11ssp"
+        android:id="@+id/set_as_tv_image"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toStartOf="@id/ic_set_as_btn_fb"
+        app:layout_constraintBottom_toBottomOf="@id/ic_set_as_btn_fb"
+        app:layout_constraintTop_toTopOf="@id/ic_set_as_btn_fb"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
